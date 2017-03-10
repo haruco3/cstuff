@@ -38,7 +38,9 @@ int OpApp::eval(env *v) {
 				ret += t->head->eval(v);
 				t = t->tail;
 			};
+			break;
 		case timesop:
+			ret = 1;
 			if (t) {
 				ret = t->head->eval(v);
 				t = t->tail;
